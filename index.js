@@ -33,4 +33,5 @@ function thatValue(value) {
     this.contains = validators;
     this.and = validators;
     this.or = this;
+    
 }
