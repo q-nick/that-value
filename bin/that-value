@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+'use strict';
+
+var thatValue = require('../index.js');
+
+var args = process.argv.slice(2);
+
+console.log(thatValue(args[0]).is[args[1]]().valid());

@@ -1,0 +1,35 @@
+{
+  "name": "that-value",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "rewire": "^2.5.1",
+    "sinon": "^1.17.2"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha ./lib/validator/**/*.js",
+    "start": "./bin/that-value"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/q-nick/thatValue.git"
+  },
+  "keywords": [
+    "validators",
+    "validator",
+    "valid",
+    "equal",
+    "compare"
+  ],
+  "bin": "bin/that-value",
+  "author": "Paweł Stefański",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/q-nick/thatValue/issues"
+  },
+  "homepage": "https://github.com/q-nick/thatValue#readme"
+}
