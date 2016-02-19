@@ -15,6 +15,10 @@ function thatValue(value) {
     validators.contains = require('./lib/validator/contains/contains.js').bind(this);
     validators.shorterThan = require('./lib/validator/shorter/shorter.js').bind(this);
     validators.longerThan = require('./lib/validator/longer/longer.js').bind(this);
+    validators.ip = require('./lib/validator/ip/ip.js').bind(this);
+    validators.vin = require('./lib/validator/vin/vin.js').bind(this);
+    validators.uri = require('./lib/validator/uri/uri.js').bind(this);
+    validators.isbn = require('./lib/validator/isbn/isbn.js').bind(this);
 
     var validations = [];
 

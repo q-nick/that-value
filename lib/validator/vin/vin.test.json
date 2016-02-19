@@ -1,0 +1,13 @@
+{
+  "vin": {
+    "invalid": [
+      "AAAAAAAAAAAAAAAAA",
+      "AABBEAWFHSEKJFKSE"
+    ],
+    "valid": [
+      "1FAHP26W49G252740",
+      "2FTRX07W53C371582",
+      "WP0CA29863U153381"
+    ]
+  }
+}

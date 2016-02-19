@@ -62,6 +62,15 @@ runTests(ShorterValidatorTest.shorter, 'shorterThan');
 var LongerValidatorTest = require('./lib/validator/longer/longer.test.json');
 runTests(LongerValidatorTest.longer, 'longerThan');
 
+var IPValidatorTest = require('./lib/validator/ip/ip.test.json');
+runTests(IPValidatorTest.ip, 'ip');
+
+var VINValidatorTest = require('./lib/validator/vin/vin.test.json');
+runTests(VINValidatorTest.vin, 'vin');
+
+var URIValidatorTest = require('./lib/validator/uri/uri.test.json');
+runTests(URIValidatorTest.uri, 'uri');
+
 function executeTest(test, validator, type) {
     var isComplexTest = false;
     if (typeof test === 'object' && test && 'value' in test) {
@@ -70,11 +79,21 @@ function executeTest(test, validator, type) {
 
     if (!isComplexTest) {
         it(test + ' is ' + validator + '  - ' + type, function() {
-            expect(ThatValue(test).is[validator]().valid()).to.equal(type === 'valid');
+            //do it in small loop for stress tests
+            var effect = null;
+            for (var i = 0; i < 1; i++) {
+                effect = ThatValue(test).is[validator]().valid();
+            }
+            expect(effect).to.equal(type === 'valid');
         });
     } else {
         it(test.value + ' is ' + validator + ' ' + test.arg + ' - ' + type, function() {
-            expect(ThatValue(test.value).is[validator](test.arg).valid()).to.equal(type === 'valid');
+            //do it in small loop for stress tests
+            var effect = null;
+            for (var i = 0; i < 1; i++) {
+                effect = ThatValue(test.value).is[validator](test.arg).valid();
+            }
+            expect(effect).to.equal(type === 'valid');
         });
     }
 }
