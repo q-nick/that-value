@@ -100,12 +100,12 @@ function executeTest(test, validator, type) {
 
 function runTests(tests, validator) {
     describe(validator[0].toUpperCase() + validator.slice(1) + ' validator', function() {
-        describe('valid test', function() {
+        describe('valid values tests', function() {
             for (var i = 0; i < tests.valid.length; i++) {
                 executeTest(tests.valid[i], validator, 'valid');
             }
         });
-        describe('invalid test', function() {
+        describe('invalid values tests', function() {
             for (var j = 0; j < tests.invalid.length; j++) {
                 executeTest(tests.invalid[j], validator, 'invalid');
             }
