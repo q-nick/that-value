@@ -9,12 +9,12 @@
     "mocha": "^2.3.4"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha ./lib/validator/**/*.test.js ./index.test.js",
+    "test": "./node_modules/mocha/bin/mocha ./index.test.js",
     "start": "./bin/that-value"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/q-nick/thatValue.git"
+    "url": "git+https://github.com/q-nick/that-value.git"
   },
   "keywords": [
     "validators",
@@ -27,7 +27,7 @@
   "author": "Paweł Stefański",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/q-nick/thatValue/issues"
+    "url": "https://github.com/q-nick/that-value/issues"
   },
-  "homepage": "https://github.com/q-nick/thatValue#readme"
+  "homepage": "https://github.com/q-nick/that-value#readme"
 }

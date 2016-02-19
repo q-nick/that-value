@@ -1,0 +1,23 @@
+{
+  "shorter": {
+    "invalid": [
+      {
+        "value": 123, "arg": 5
+      }, {
+        "value": null, "arg": 5
+      }, {
+        "value": [], "arg": 5
+      }, {
+        "value": {}, "arg": 5
+      }, {
+        "value": "abracadabra", "arg": 5
+      }
+    ], "valid": [
+      {
+        "value": "abracadabra", "arg": 15
+      }, {
+        "value": "abracadabra", "arg": 12
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "contains": {
+    "invalid": [
+      {
+        "value": 123, "arg": "a"
+      }, {
+        "value": null, "arg": "a"
+      }, {
+        "value": [], "arg": "a"
+      }, {
+        "value": {}, "arg": "a"
+      }
+    ], "valid": [
+      {
+        "value": "afsdfasdf@drgdrg.pl", "arg": "a"
+      }, {
+        "value": "a+++++sdf@drgdrg.pl", "arg": "a"
+      }, {
+        "value": "a@a.as", "arg": "a"
+      }
+    ]
+  }
+}

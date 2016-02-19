@@ -1,0 +1,6 @@
+{
+  "email": {
+    "invalid": [123, null, [], {}, "asdfasdf@drgsdrgdsrg", "123123@dsrgsdrg"],
+    "valid": ["afsdfasdf@drgdrg.pl", "a+++++sdf@drgdrg.pl", "a@a.as"]
+  }
+}

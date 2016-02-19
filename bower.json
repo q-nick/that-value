@@ -1,0 +1,27 @@
+{
+  "name": "that-value",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Paweł Stefański"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "validators",
+    "validator",
+    "valid",
+    "equal",
+    "compare"
+  ],
+  "homepage": "https://github.com/q-nick/that-value",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
