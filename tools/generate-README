@@ -1,0 +1,37 @@
+#!/usr/bin/env node
+'use strict';
+
+var fs = require('fs');
+
+var tests = [];
+var validator = require('../lib/validator/number/number.test.json');
+tests.push(validator);
+validator = require('../lib/validator/string/string.test.json');
+tests.push(validator);
+validator = require('../lib/validator/email/email.test.json');
+tests.push(validator);
+validator = require('../lib/validator/ip/ip.test.json');
+tests.push(validator);
+validator = require('../lib/validator/isbn/isbn.test.json');
+tests.push(validator);
+validator = require('../lib/validator/vin/vin.test.json');
+tests.push(validator);
+validator = require('../lib/validator/uri/uri.test.json');
+tests.push(validator);
+
+function generate() {
+    var ReadmeContent = '# Example Test Cases, and list of available validators\n';
+    for (var i = 0; i < tests.length; i++) {
+        var test = tests[i];
+        for (var key in test) {
+            ReadmeContent += '### Validator - ' + key +'\n';
+            for (var j = i; j < test[key].valid.length; j++) {
+                ReadmeContent += '``` ThatValue(' + test[key].valid[j] + ').is.' + key + '().valid();```\n';
+            }
+        }
+    }
+
+    fs.writeFile('README-generated.md', ReadmeContent);
+}
+
+generate();
