@@ -25,7 +25,7 @@ function generate() {
         var test = tests[i];
         for (var key in test) {
             ReadmeContent += '### Validator - ' + key + '\n';
-            for (var j = i; j < test[key].valid.length; j++) {
+            for (var j = 0; j < test[key].valid.length; j++) {
                 ReadmeContent += '```\n ThatValue(' + (typeof test[key].valid[j] === 'string' ? '"' + test[key].valid[j] + '"' : test[key].valid[j] ) + ').is.' + key + '().valid(); \n```\n\n';
             }
         }

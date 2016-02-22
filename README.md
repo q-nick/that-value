@@ -18,6 +18,10 @@
 
 ### Validator - string
 ```
+ ThatValue("a123").is.string().valid(); 
+```
+
+```
  ThatValue("a123a").is.string().valid(); 
 ```
 
@@ -31,10 +35,30 @@
 
 ### Validator - email
 ```
+ ThatValue("afsdfasdf@drgdrg.pl").is.email().valid(); 
+```
+
+```
+ ThatValue("a+++++sdf@drgdrg.pl").is.email().valid(); 
+```
+
+```
  ThatValue("a@a.as").is.email().valid(); 
 ```
 
 ### Validator - ip
+```
+ ThatValue("0.0.0.0").is.ip().valid(); 
+```
+
+```
+ ThatValue("192.168.1.1").is.ip().valid(); 
+```
+
+```
+ ThatValue("255.255.255.255").is.ip().valid(); 
+```
+
 ```
  ThatValue("0000:0000:0000:0000:0000:0000:0000:0000").is.ip().valid(); 
 ```
@@ -57,6 +81,22 @@
 
 ### Validator - isbn
 ```
+ ThatValue("9971502100").is.isbn().valid(); 
+```
+
+```
+ ThatValue("99921-58-10-7").is.isbn().valid(); 
+```
+
+```
+ ThatValue("960 425 059 0").is.isbn().valid(); 
+```
+
+```
+ ThatValue("99921-58-10-6").is.isbn().valid(); 
+```
+
+```
  ThatValue("9780306406157").is.isbn().valid(); 
 ```
 
@@ -73,7 +113,43 @@
 ```
 
 ### Validator - vin
+```
+ ThatValue("1FAHP26W49G252740").is.vin().valid(); 
+```
+
+```
+ ThatValue("2FTRX07W53C371582").is.vin().valid(); 
+```
+
+```
+ ThatValue("WP0CA29863U153381").is.vin().valid(); 
+```
+
 ### Validator - uri
+```
+ ThatValue("http://foo.com/blah_blah").is.uri().valid(); 
+```
+
+```
+ ThatValue("http://foo.com/blah_blah/").is.uri().valid(); 
+```
+
+```
+ ThatValue("http://foo.com/blah_blah_(wikipedia)").is.uri().valid(); 
+```
+
+```
+ ThatValue("http://foo.com/blah_blah_(wikipedia)_(again)").is.uri().valid(); 
+```
+
+```
+ ThatValue("http://www.example.com/wpstyle/?p=364").is.uri().valid(); 
+```
+
+```
+ ThatValue("https://www.example.com/foo/?bar=baz&inga=42&quux").is.uri().valid(); 
+```
+
 ```
  ThatValue("http://userid:password@example.com:8080").is.uri().valid(); 
 ```
