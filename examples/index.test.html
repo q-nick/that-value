@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../that-value.js"></script>
+</head>
+<body>
+<script>
+    function display(effect) {
+        var nodeE = document.createElement('div');
+        nodeE.innerHTML = effect;
+        document.body.appendChild(nodeE);
+    }
+
+    function executeTest(test) {
+        var isComplexTest = false;
+        var effect = null;
+
+        if (typeof test === 'object' && test && 'arg' in test) {
+            isComplexTest = true;
+        }
+
+        if (!isComplexTest) {
+            effect = ThatValue(test.value).is[test.validator]().valid();
+            display('<b style="display:inline-block;width: 300px;">' + test.value + '</b> is valid ' + test.validator + ': ' + effect + '<hr>');
+        } else {
+            effect = ThatValue(test.value).is[test.validator](test.arg).valid();
+            display('<b style="display:inline-block;width: 300px;">' + test.value + '</b> is ' + test.validator + ' ' + test.arg + ': ' + effect + '<hr>');
+        }
+    }
+
+    function runTests(tests) {
+        for (var i = 0; i < tests.length; i++) {
+            executeTest(tests[i]);
+        }
+    }
+
+    runTests([{
+        value: 'paul@mail.pl',
+        validator: 'email'
+    }, {
+        value: '127.0.0.1',
+        validator: 'ip'
+    }, {
+        value: 1234567890,
+        validator: 'number'
+    }, {
+        value: 1234567890,
+        validator: 'greaterThan',
+        arg: 111111
+    }, {
+        value: 123,
+        validator: 'lowerThan',
+        arg: 111111
+    }, {
+        value: 'I love strings',
+        validator: 'string'
+    }, {
+        value: 'I love strings',
+        validator: 'shorterThan',
+        arg: 123
+    }, {
+        value: 'I love strings',
+        validator: 'longerThan',
+        arg: 12
+    }, {
+        value: 'I love strings',
+        validator: 'contains',
+        arg: 'love'
+    }, {
+        value: 'https://github.com/q-nick/that-value',
+        validator: 'uri'
+    }, {
+        value: '1FAHP26W49G252740',
+        validator: 'vin'
+    }]);
+</script>
+</body>
+</html>

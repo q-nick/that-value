@@ -6,11 +6,13 @@
   "dependencies": {},
   "devDependencies": {
     "chai": "^3.4.1",
-    "mocha": "^2.3.4"
+    "mocha": "^2.3.4",
+    "webpack": "^1.12.13"
   },
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha ./index.test.js",
-    "start": "./bin/that-value"
+    "start": "./bin/that-value",
+    "build": "./node_modules/webpack/bin/webpack.js -p"
   },
   "repository": {
     "type": "git",

@@ -21,6 +21,7 @@ function thatValue(value) {
     validators.isbn = require('./lib/validator/isbn/isbn.js').bind(this);
 
     var validations = [];
+    var errors = [];
 
     this.pushValidation = function(validation) {
         validations.push(validation);
@@ -30,13 +31,20 @@ function thatValue(value) {
         validators[key] = validation.bind(this);
     };
 
+    this.getErrors = function() {
+        return errors;
+    };
+
     this.valid = function() {
+        errors.splice(0, errors.length);
+        var anyFalse = false;
         for (var i = 0; i < validations.length; i++) {
-            if (!validations[i](value)) {
-                return false;
+            if (!validations[i].validator(value)) {
+                errors.push(validations[i].name);
+                if (!anyFalse) anyFalse = true;
             }
         }
-        return true;
+        return !anyFalse;
     };
 
     this.is = validators;

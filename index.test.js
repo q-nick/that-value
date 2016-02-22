@@ -36,6 +36,34 @@ describe('Complex validator test', function() {
         });
     });
 
+    describe('numbers', function() {
+        it('should return false and contains all errors', function() {
+            var validation =
+                ThatValue(null)
+                    .is.number()
+                    .is.string()
+                    .is.email()
+                    .and.greaterThan(5)
+                    .and.lowerThan(5)
+                    .and.shorterThan(5)
+                    .and.longerThan(5);
+            var errors = validation.getErrors();
+
+            expect(validation.valid()).to.equal(false);
+            validation.valid();
+            validation.valid();
+            validation.valid();
+            expect(errors.length).to.equal(7);
+            expect(errors.indexOf('number')).not.to.equal(-1);
+            expect(errors.indexOf('string')).not.to.equal(-1);
+            expect(errors.indexOf('email')).not.to.equal(-1);
+            expect(errors.indexOf('greaterThan')).not.to.equal(-1);
+            expect(errors.indexOf('lowerThan')).not.to.equal(-1);
+            expect(errors.indexOf('shorterThan')).not.to.equal(-1);
+            expect(errors.indexOf('longerThan')).not.to.equal(-1);
+        });
+    });
+
 });
 
 var NumberValidatorTest = require('./lib/validator/number/number.test.json');
@@ -94,6 +122,20 @@ function executeTest(test, validator, type) {
                 effect = ThatValue(test.value).is[validator](test.arg).valid();
             }
             expect(effect).to.equal(type === 'valid');
+        });
+    }
+
+    if (type === 'invalid') {
+        it('should save error name - ' + validator + ' - to errors list', function() {
+            var validation = null;
+            if (!isComplexTest) {
+                validation = ThatValue(test).is[validator]();
+            } else {
+                validation = ThatValue(test.value).is[validator](test.arg);
+            }
+            expect(validation.getErrors().indexOf(validator)).to.equal(-1);
+            validation.valid();
+            expect(validation.getErrors().indexOf(validator)).not.to.equal(-1);
         });
     }
 }

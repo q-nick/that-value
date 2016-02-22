@@ -1,7 +1,7 @@
 {
   "name": "that-value",
   "description": "",
-  "main": "index.js",
+  "main": "that-value.js",
   "authors": [
     "Paweł Stefański"
   ],
