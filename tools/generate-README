@@ -24,9 +24,9 @@ function generate() {
     for (var i = 0; i < tests.length; i++) {
         var test = tests[i];
         for (var key in test) {
-            ReadmeContent += '### Validator - ' + key +'\n';
+            ReadmeContent += '### Validator - ' + key + '\n';
             for (var j = i; j < test[key].valid.length; j++) {
-                ReadmeContent += '``` ThatValue(' + test[key].valid[j] + ').is.' + key + '().valid(); ```\n\n';
+                ReadmeContent += '``` ThatValue(' + (typeof test[key].valid[j] === 'string' ? '"' + test[key].valid[j] + '"' : test[key].valid[j] ) + ').is.' + key + '().valid(); ```\n\n';
             }
         }
     }
