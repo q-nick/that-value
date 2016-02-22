@@ -26,12 +26,12 @@ function generate() {
         for (var key in test) {
             ReadmeContent += '### Validator - ' + key +'\n';
             for (var j = i; j < test[key].valid.length; j++) {
-                ReadmeContent += '``` ThatValue(' + test[key].valid[j] + ').is.' + key + '().valid();```\n';
+                ReadmeContent += '``` ThatValue(' + test[key].valid[j] + ').is.' + key + '().valid();``` \n';
             }
         }
     }
 
-    fs.writeFile('README-generated.md', ReadmeContent);
+    fs.writeFile('README.md', ReadmeContent);
 }
 
 generate();
