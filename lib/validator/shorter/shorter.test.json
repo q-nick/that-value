@@ -1,5 +1,5 @@
 {
-  "shorter": {
+  "shorterThan": {
     "invalid": [
       {
         "value": 123, "arg": 5

@@ -243,47 +243,60 @@ now ```errorList``` will contain name of validators which returned false. In Thi
  ThatValue("1234").is.zipCode("CV").valid(); 
 ```
 
-### Validator - greater
+### Validator - greaterThan
 ```
- ThatValue(1.0000000001).is.greater(1).valid(); 
-```
-
-```
- ThatValue(2).is.greater(1).valid(); 
+ ThatValue(1.0000000001).is.greaterThan(1).valid(); 
 ```
 
 ```
- ThatValue(22345234).is.greater(3456).valid(); 
-```
-
-### Validator - lower
-```
- ThatValue(1.0000000001).is.lower(1.1).valid(); 
+ ThatValue(2).is.greaterThan(1).valid(); 
 ```
 
 ```
- ThatValue(2).is.lower(3).valid(); 
+ ThatValue(22345234).is.greaterThan(3456).valid(); 
+```
+
+### Validator - lowerThan
+```
+ ThatValue(1.0000000001).is.lowerThan(1.1).valid(); 
 ```
 
 ```
- ThatValue(22345234).is.lower(345612341234).valid(); 
-```
-
-### Validator - shorter
-```
- ThatValue("abracadabra").is.shorter(15).valid(); 
+ ThatValue(2).is.lowerThan(3).valid(); 
 ```
 
 ```
- ThatValue("abracadabra").is.shorter(12).valid(); 
+ ThatValue(22345234).is.lowerThan(345612341234).valid(); 
 ```
 
-### Validator - longer
+### Validator - shorterThan
 ```
- ThatValue("abracadabra").is.longer(5).valid(); 
+ ThatValue("abracadabra").is.shorterThan(15).valid(); 
 ```
 
 ```
- ThatValue("abracadabra").is.longer(10).valid(); 
+ ThatValue("abracadabra").is.shorterThan(12).valid(); 
+```
+
+### Validator - longerThan
+```
+ ThatValue("abracadabra").is.longerThan(5).valid(); 
+```
+
+```
+ ThatValue("abracadabra").is.longerThan(10).valid(); 
+```
+
+### Validator - contains
+```
+ ThatValue("afsdfasdf@drgdrg.pl").is.contains("a").valid(); 
+```
+
+```
+ ThatValue("a+++++sdf@drgdrg.pl").is.contains("a").valid(); 
+```
+
+```
+ ThatValue("a@a.as").is.contains("a").valid(); 
 ```
 

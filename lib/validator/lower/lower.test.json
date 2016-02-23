@@ -1,5 +1,5 @@
 {
-  "lower": {
+  "lowerThan": {
     "invalid": [
       {
         "value": "1.0000000001", "arg": "2"

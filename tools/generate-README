@@ -28,6 +28,8 @@ validator = require('../lib/validator/shorter/shorter.test.json');
 tests.push(validator);
 validator = require('../lib/validator/longer/longer.test.json');
 tests.push(validator);
+validator = require('../lib/validator/contains/contains.test.json');
+tests.push(validator);
 
 function generate() {
     var ReadmeContent =
