@@ -202,71 +202,88 @@ now ```errorList``` will contain name of validators which returned false. In Thi
  ThatValue("http://userid@example.com/").is.uri().valid(); 
 ```
 
+### Validator - zipCode
 ```
- ThatValue("http://userid@example.com:8080").is.uri().valid(); 
-```
-
-```
- ThatValue("http://userid@example.com:8080/").is.uri().valid(); 
+ ThatValue("1234").is.zipCode("AF").valid(); 
 ```
 
 ```
- ThatValue("http://userid:password@example.com").is.uri().valid(); 
+ ThatValue("1234").is.zipCode("AL").valid(); 
 ```
 
 ```
- ThatValue("http://userid:password@example.com/").is.uri().valid(); 
+ ThatValue("1234").is.zipCode("AM").valid(); 
 ```
 
 ```
- ThatValue("http://142.42.1.1/").is.uri().valid(); 
+ ThatValue("1234").is.zipCode("AR").valid(); 
 ```
 
 ```
- ThatValue("http://142.42.1.1:8080/").is.uri().valid(); 
+ ThatValue("1234").is.zipCode("AT").valid(); 
 ```
 
 ```
- ThatValue("http://foo.com/blah_(wikipedia)#cite-1").is.uri().valid(); 
+ ThatValue("1234").is.zipCode("AU").valid(); 
 ```
 
 ```
- ThatValue("http://foo.com/blah_(wikipedia)_blah#cite-1").is.uri().valid(); 
+ ThatValue("1234").is.zipCode("BD").valid(); 
 ```
 
 ```
- ThatValue("http://foo.com/(something)?after=parens").is.uri().valid(); 
+ ThatValue("1234").is.zipCode("BE").valid(); 
 ```
 
 ```
- ThatValue("http://code.google.com/events/#&product=browser").is.uri().valid(); 
+ ThatValue("1234").is.zipCode("BG").valid(); 
 ```
 
 ```
- ThatValue("http://j.mp").is.uri().valid(); 
+ ThatValue("1234").is.zipCode("CV").valid(); 
+```
+
+### Validator - greater
+```
+ ThatValue(1.0000000001).is.greater(1).valid(); 
 ```
 
 ```
- ThatValue("http://foo.bar/?q=Test%20URL-encoded%20stuff").is.uri().valid(); 
+ ThatValue(2).is.greater(1).valid(); 
 ```
 
 ```
- ThatValue("http://-.~_!$&'()*+,;=:%40:80%2f::::::@example.com").is.uri().valid(); 
+ ThatValue(22345234).is.greater(3456).valid(); 
+```
+
+### Validator - lower
+```
+ ThatValue(1.0000000001).is.lower(1.1).valid(); 
 ```
 
 ```
- ThatValue("http://1337.net").is.uri().valid(); 
+ ThatValue(2).is.lower(3).valid(); 
 ```
 
 ```
- ThatValue("http://a.b-c.de").is.uri().valid(); 
+ ThatValue(22345234).is.lower(345612341234).valid(); 
+```
+
+### Validator - shorter
+```
+ ThatValue("abracadabra").is.shorter(15).valid(); 
 ```
 
 ```
- ThatValue("ftp://foo.bar/baz").is.uri().valid(); 
+ ThatValue("abracadabra").is.shorter(12).valid(); 
+```
+
+### Validator - longer
+```
+ ThatValue("abracadabra").is.longer(5).valid(); 
 ```
 
 ```
- ThatValue("http://223.255.255.254").is.uri().valid(); 
+ ThatValue("abracadabra").is.longer(10).valid(); 
 ```
 

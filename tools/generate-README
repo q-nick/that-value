@@ -18,6 +18,16 @@ validator = require('../lib/validator/vin/vin.test.json');
 tests.push(validator);
 validator = require('../lib/validator/uri/uri.test.json');
 tests.push(validator);
+validator = require('../lib/validator/zipCode/zipCode.test.json');
+tests.push(validator);
+validator = require('../lib/validator/greater/greater.test.json');
+tests.push(validator);
+validator = require('../lib/validator/lower/lower.test.json');
+tests.push(validator);
+validator = require('../lib/validator/shorter/shorter.test.json');
+tests.push(validator);
+validator = require('../lib/validator/longer/longer.test.json');
+tests.push(validator);
 
 function generate() {
     var ReadmeContent =
@@ -30,7 +40,7 @@ function generate() {
             '```\n' +
             'bower install that-value --save\n' +
             '```\n' +
-            'After that you must include main file: ```that-value.js``` in your code. It will add ```ThatValue``` to global namespace.\n'+
+            'After that you must include main file: ```that-value.js``` in your code. It will add ```ThatValue``` to global namespace.\n' +
             '### How to use: \n' +
             'ThatValue uses natural language to show what validation is really doing. It has few hyphens like: "is", "and" and probably few more in future.\n' +
             'For Example if you want to check something like this:\n' +
@@ -53,8 +63,13 @@ function generate() {
         var test = tests[i];
         for (var key in test) {
             ReadmeContent += '### Validator - ' + key + '\n';
-            for (var j = 0; j < test[key].valid.length; j++) {
-                ReadmeContent += '```\n ThatValue(' + (typeof test[key].valid[j] === 'string' ? '"' + test[key].valid[j] + '"' : test[key].valid[j] ) + ').is.' + key + '().valid(); \n```\n\n';
+
+            for (var j = 0; (j < test[key].valid.length && j < 10); j++) {
+                if (typeof test[key].valid[j] === 'object' && test[key].valid[j] && 'arg' in test[key].valid[j]) {
+                    ReadmeContent += '```\n ThatValue(' + (typeof test[key].valid[j].value === 'string' ? '"' + test[key].valid[j].value + '"' : test[key].valid[j].value ) + ').is.' + key + '(' + (typeof test[key].valid[j].arg === 'string' ? '"' + test[key].valid[j].arg + '"' : test[key].valid[j].arg ) + ').valid(); \n```\n\n';
+                } else {
+                    ReadmeContent += '```\n ThatValue(' + (typeof test[key].valid[j] === 'string' ? '"' + test[key].valid[j] + '"' : test[key].valid[j] ) + ').is.' + key + '().valid(); \n```\n\n';
+                }
             }
         }
     }
