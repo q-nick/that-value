@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>That-value by q-nick</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">That-value</h1>
+      <h2 class="project-tagline">Multi language/platform pack of validators (front-end and back-end)</h2>
+      <a href="https://github.com/q-nick/that-value" class="btn">View on GitHub</a>
+      <a href="https://github.com/q-nick/that-value/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/q-nick/that-value/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="that-value--thatvalue" class="anchor" href="#that-value--thatvalue" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>that-value &amp; ThatValue</h1>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation:</h3>
+
+<p>Currently options to install are:</p>
+
+<pre><code>npm install that-value --save
+</code></pre>
+
+<pre><code>bower install that-value --save
+</code></pre>
+
+<p>After that you must include main file: <code>that-value.js</code> in your code. It will add <code>ThatValue</code> to global namespace.</p>
+
+<h3>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use:</h3>
+
+<p>ThatValue uses natural language to show what validation is really doing. It has few hyphens like: "is", "and" and probably few more in future.
+For Example if you want to check something like this:
+"If that value is an valid email and contains specific domain "mail.pl" you can write it as:"</p>
+
+<pre><code>if(ThatValue('paul@mail.pl').is.email().and.contains('mail.pl').valid()) 
+{ 
+/*do something*/
+}
+</code></pre>
+
+<p>call <code>.valid()</code> is required here to get validation result. But we can use it in another way.
+You can also check which property isn`t valid, then you should save validation object that is returned by ThatValue.</p>
+
+<pre><code>var emailValue = ThatValue('paul@omg.pl').is.string().is.email().and.contains('paul');
+
+if(emailValue.valid())
+{
+    /* when valid */
+} 
+else
+{ 
+  /*not valid*/
+   var errorList = emailValue.getErrors();
+}
+</code></pre>
+
+<p>now <code>errorList</code> will contain name of validators which returned false. In This Example: <code>["email"]</code></p>
+
+<h1>
+<a id="list-of-currently-available-validators" class="anchor" href="#list-of-currently-available-validators" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>List of currently available validators</h1>
+
+<h3>
+<a id="validator---number" class="anchor" href="#validator---number" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Validator - number</h3>
+
+<pre><code> ThatValue(123).is.number().valid(); 
+</code></pre>
+
+<pre><code> ThatValue(-113452).is.number().valid(); 
+</code></pre>
+
+<pre><code> ThatValue(112345).is.number().valid(); 
+</code></pre>
+
+<pre><code> ThatValue(1.023).is.number().valid(); 
+</code></pre>
+
+<h3>
+<a id="validator---string" class="anchor" href="#validator---string" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Validator - string</h3>
+
+<pre><code> ThatValue("a123").is.string().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("a123a").is.string().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("123").is.string().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("{a: '123'}").is.string().valid(); 
+</code></pre>
+
+<h3>
+<a id="validator---email" class="anchor" href="#validator---email" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Validator - email</h3>
+
+<pre><code> ThatValue("afsdfasdf@drgdrg.pl").is.email().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("a+++++sdf@drgdrg.pl").is.email().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("a@a.as").is.email().valid(); 
+</code></pre>
+
+<h3>
+<a id="validator---ip" class="anchor" href="#validator---ip" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Validator - ip</h3>
+
+<pre><code> ThatValue("0.0.0.0").is.ip().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("192.168.1.1").is.ip().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("255.255.255.255").is.ip().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("0000:0000:0000:0000:0000:0000:0000:0000").is.ip().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("fe00::1").is.ip().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("fe80::217:f2ff:fe07:ed62").is.ip().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff").is.ip().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("2001:0db8:0000:85a3:0000:0000:ac1f:8001").is.ip().valid(); 
+</code></pre>
+
+<h3>
+<a id="validator---isbn" class="anchor" href="#validator---isbn" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Validator - isbn</h3>
+
+<pre><code> ThatValue("9971502100").is.isbn().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("99921-58-10-7").is.isbn().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("960 425 059 0").is.isbn().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("99921-58-10-6").is.isbn().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("9780306406157").is.isbn().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("978-0-306-40615-7").is.isbn().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("978 0 306 40615 7").is.isbn().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("978-0-306-40615-6").is.isbn().valid(); 
+</code></pre>
+
+<h3>
+<a id="validator---vin" class="anchor" href="#validator---vin" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Validator - vin</h3>
+
+<pre><code> ThatValue("1FAHP26W49G252740").is.vin().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("2FTRX07W53C371582").is.vin().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("WP0CA29863U153381").is.vin().valid(); 
+</code></pre>
+
+<h3>
+<a id="validator---uri" class="anchor" href="#validator---uri" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Validator - uri</h3>
+
+<pre><code> ThatValue("http://foo.com/blah_blah").is.uri().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("http://foo.com/blah_blah/").is.uri().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("http://foo.com/blah_blah_(wikipedia)").is.uri().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("http://foo.com/blah_blah_(wikipedia)_(again)").is.uri().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("http://www.example.com/wpstyle/?p=364").is.uri().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("https://www.example.com/foo/?bar=baz&amp;inga=42&amp;quux").is.uri().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("http://userid:password@example.com:8080").is.uri().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("http://userid:password@example.com:8080/").is.uri().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("http://userid@example.com").is.uri().valid(); 
+</code></pre>
+
+<pre><code> ThatValue("http://userid@example.com/").is.uri().valid(); 
+</code></pre>
+
+<h3>
+<a id="validator---zipcode" class="anchor" href="#validator---zipcode" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Validator - zipCode</h3>
+
+<pre><code> ThatValue("1234").is.zipCode("AF").valid(); 
+</code></pre>
+
+<pre><code> ThatValue("1234").is.zipCode("AL").valid(); 
+</code></pre>
+
+<pre><code> ThatValue("1234").is.zipCode("AM").valid(); 
+</code></pre>
+
+<pre><code> ThatValue("1234").is.zipCode("AR").valid(); 
+</code></pre>
+
+<pre><code> ThatValue("1234").is.zipCode("AT").valid(); 
+</code></pre>
+
+<pre><code> ThatValue("1234").is.zipCode("AU").valid(); 
+</code></pre>
+
+<pre><code> ThatValue("1234").is.zipCode("BD").valid(); 
+</code></pre>
+
+<pre><code> ThatValue("1234").is.zipCode("BE").valid(); 
+</code></pre>
+
+<pre><code> ThatValue("1234").is.zipCode("BG").valid(); 
+</code></pre>
+
+<pre><code> ThatValue("1234").is.zipCode("CV").valid(); 
+</code></pre>
+
+<h3>
+<a id="validator---greaterthan" class="anchor" href="#validator---greaterthan" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Validator - greaterThan</h3>
+
+<pre><code> ThatValue(1.0000000001).is.greaterThan(1).valid(); 
+</code></pre>
+
+<pre><code> ThatValue(2).is.greaterThan(1).valid(); 
+</code></pre>
+
+<pre><code> ThatValue(22345234).is.greaterThan(3456).valid(); 
+</code></pre>
+
+<h3>
+<a id="validator---lowerthan" class="anchor" href="#validator---lowerthan" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Validator - lowerThan</h3>
+
+<pre><code> ThatValue(1.0000000001).is.lowerThan(1.1).valid(); 
+</code></pre>
+
+<pre><code> ThatValue(2).is.lowerThan(3).valid(); 
+</code></pre>
+
+<pre><code> ThatValue(22345234).is.lowerThan(345612341234).valid(); 
+</code></pre>
+
+<h3>
+<a id="validator---shorterthan" class="anchor" href="#validator---shorterthan" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Validator - shorterThan</h3>
+
+<pre><code> ThatValue("abracadabra").is.shorterThan(15).valid(); 
+</code></pre>
+
+<pre><code> ThatValue("abracadabra").is.shorterThan(12).valid(); 
+</code></pre>
+
+<h3>
+<a id="validator---longerthan" class="anchor" href="#validator---longerthan" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Validator - longerThan</h3>
+
+<pre><code> ThatValue("abracadabra").is.longerThan(5).valid(); 
+</code></pre>
+
+<pre><code> ThatValue("abracadabra").is.longerThan(10).valid(); 
+</code></pre>
+
+<h3>
+<a id="validator---contains" class="anchor" href="#validator---contains" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Validator - contains</h3>
+
+<pre><code> ThatValue("afsdfasdf@drgdrg.pl").is.contains("a").valid(); 
+</code></pre>
+
+<pre><code> ThatValue("a+++++sdf@drgdrg.pl").is.contains("a").valid(); 
+</code></pre>
+
+<pre><code> ThatValue("a@a.as").is.contains("a").valid(); 
+</code></pre>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/q-nick/that-value">That-value</a> is maintained by <a href="https://github.com/q-nick">q-nick</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
