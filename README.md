@@ -13,7 +13,10 @@ ThatValue uses natural language to show what validation is really doing. It has 
 For Example if you want to check something like this:
 "If that value is an valid email and contains specific domain "mail.pl" you can write it as:"
 ```
-if(ThatValue('paul@mail.pl').is.email().and.contains('mail.pl').valid()) { /*do something*/}
+if(ThatValue('paul@mail.pl').is.email().and.contains('mail.pl').valid()) 
+{ 
+/*do something*/
+}
 ```
 call ```.valid()``` is required here to get validation result. But we can use it in another way.
 You can also check which property isn`t valid, then you should save validation object that is returned by ThatValue.
@@ -22,7 +25,8 @@ var emailValue = ThatValue('paul@omg.pl').is.string().is.email().and.contains('p
 
 if(emailValue.valid()){/* when valid */} 
 else
-{ /*not valid*/
+{ 
+  /*not valid*/
    var errorList = emailValue.getErrors();
 }```
 now ```errorList``` will contain name of validators which returned false. In This Example: ```["email"]```

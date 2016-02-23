@@ -36,13 +36,13 @@ function generate() {
             'For Example if you want to check something like this:\n' +
             '"If that value is an valid email and contains specific domain "mail.pl" you can write it as:"\n' +
             '```\n' +
-            'if(ThatValue(\'paul@mail.pl\').is.email().and.contains(\'mail.pl\').valid()) { /*do something*/}\n' +
+            'if(ThatValue(\'paul@mail.pl\').is.email().and.contains(\'mail.pl\').valid()) \n{ \n/*do something*/\n}\n' +
             '```\n' +
             'call ```.valid()``` is required here to get validation result. But we can use it in another way.\n' +
             'You can also check which property isn`t valid, then you should save validation object that is returned by ThatValue.\n' +
             '```\n' +
             'var emailValue = ThatValue(\'paul@omg.pl\').is.string().is.email().and.contains(\'paul\');\n\n' +
-            'if(emailValue.valid()){/* when valid */} \nelse\n{ /*not valid*/\n' +
+            'if(emailValue.valid()){/* when valid */} \nelse\n{ \n  /*not valid*/\n' +
             '   var errorList = emailValue.getErrors();\n' +
             '}' +
             '```\n' +
