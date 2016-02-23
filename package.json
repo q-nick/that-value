@@ -1,6 +1,6 @@
 {
   "name": "that-value",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "index.js",
   "dependencies": {},
@@ -24,7 +24,16 @@
     "validator",
     "valid",
     "equal",
-    "compare"
+    "compare",
+    "email",
+    "ip",
+    "number",
+    "string",
+    "contains",
+    "lower than",
+    "greater than",
+    "shorter than",
+    "longer than"
   ],
   "bin": "bin/that-value",
   "author": "Paweł Stefański",
@@ -34,4 +43,3 @@
   },
   "homepage": "https://github.com/q-nick/that-value#readme"
 }
--bash: /home/vagrant/bin:/home/vagrant/.rvm/gems/ruby-2.2.1/bin:/home/vagrant/.rvm/gems/ruby-2.2.1@global/bin:/home/vagrant/.rvm/rubies/ruby-2.2.1/bin:/home/vagrant/.nvm/versions/node/v4.2.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/puppetlabs/bin:/home/vagrant/.rvm/bin:/home/vagrant/.rvm/bin: No such file or directory
