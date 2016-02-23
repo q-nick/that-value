@@ -20,7 +20,34 @@ validator = require('../lib/validator/uri/uri.test.json');
 tests.push(validator);
 
 function generate() {
-    var ReadmeContent = '# Example Test Cases, and list of available validators\n';
+    var ReadmeContent =
+            '# that-value & ThatValue \n' +
+            '### Installation: \n' +
+            'Currently options to install are:\n' +
+            '```\n' +
+            'npm install that-value --save\n' +
+            '```\n' +
+            '```\n' +
+            'bower install that-value --save\n' +
+            '```\n' +
+            'After that you must include main file: ```that-value.js``` in your code. It will add ```ThatValue``` to global namespace.'+
+            '### How to use: \n' +
+            'ThatValue uses natural language to show what validation is really doing. It has few hyphens like: "is", "and" and probably few more in future.\n' +
+            'For Example if you want to check something like this:\n' +
+            '"If that value is an valid email and contains specific domain "mail.pl you can write it as:"\n' +
+            '```\n' +
+            'if(ThatValue(\'paul@mail.pl\').is.email().and.contains(\'mail.pl\').valid()) { /*do something*/}' +
+            '```\n' +
+            'call ```.valid()``` is required here to get validation result. But we can use it in another way.' +
+            'You can also check which property isn`t valid, then you should save validation object that is returned by ThatValue.' +
+            '```\n' +
+            'var emailValue = ThatValue(\'paul@omg.pl\').is.string().is.email().and.contains(\'paul\');' +
+            'if(emailValue.valid()){/* when valid */} else { /*not valid*/' +
+            'var errorList = emailValue.getErrors();' +
+            '```\n' +
+            'now ```errorList``` will contain name of validators which returned false. In This Example: ```["email"]```'
+        ;
+    ReadmeContent += '# List of currently available validators\n';
     for (var i = 0; i < tests.length; i++) {
         var test = tests[i];
         for (var key in test) {

@@ -1,4 +1,21 @@
-# Example Test Cases, and list of available validators
+# that-value & ThatValue 
+### Installation: 
+Currently options to install are:
+```
+npm install that-value --save
+```
+```
+bower install that-value --save
+```
+After that you must include main file: ```that-value.js``` in your code. It will add ```ThatValue``` to global namespace.### How to use: 
+ThatValue uses natural language to show what validation is really doing. It has few hyphens like: "is", "and" and probably few more in future.
+For Example if you want to check something like this:
+"If that value is an valid email and contains specific domain "mail.pl you can write it as:"
+```
+if(ThatValue('paul@mail.pl').is.email().and.contains('mail.pl').valid()) { /*do something*/}```
+call ```.valid()``` is required here to get validation result. But we can use it in another way.You can also check which property isn`t valid, then you should save validation object that is returned by ThatValue.```
+var emailValue = ThatValue('paul@omg.pl').is.string().is.email().and.contains('paul');if(emailValue.valid()){/* when valid */} else { /*not valid*/var errorList = emailValue.getErrors();```
+now ```errorList``` will contain name of validators which returned false. In This Example: ```["email"]```# List of currently available validators
 ### Validator - number
 ```
  ThatValue(123).is.number().valid(); 
