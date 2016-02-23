@@ -23,12 +23,16 @@ You can also check which property isn`t valid, then you should save validation o
 ```
 var emailValue = ThatValue('paul@omg.pl').is.string().is.email().and.contains('paul');
 
-if(emailValue.valid()){/* when valid */} 
+if(emailValue.valid())
+{
+    /* when valid */
+} 
 else
 { 
   /*not valid*/
    var errorList = emailValue.getErrors();
-}```
+}
+```
 now ```errorList``` will contain name of validators which returned false. In This Example: ```["email"]```
 # List of currently available validators
 ### Validator - number

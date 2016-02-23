@@ -42,9 +42,9 @@ function generate() {
             'You can also check which property isn`t valid, then you should save validation object that is returned by ThatValue.\n' +
             '```\n' +
             'var emailValue = ThatValue(\'paul@omg.pl\').is.string().is.email().and.contains(\'paul\');\n\n' +
-            'if(emailValue.valid()){/* when valid */} \nelse\n{ \n  /*not valid*/\n' +
+            'if(emailValue.valid())\n{\n    /* when valid */\n} \nelse\n{ \n  /*not valid*/\n' +
             '   var errorList = emailValue.getErrors();\n' +
-            '}' +
+            '}\n' +
             '```\n' +
             'now ```errorList``` will contain name of validators which returned false. In This Example: ```["email"]```\n'
         ;
