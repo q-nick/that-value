@@ -1,6 +1,6 @@
 {
   "name": "that-value",
-  "description": "",
+  "description": "Multi language/platform pack of validators (front-end and back-end)",
   "main": "that-value.js",
   "authors": [
     "Paweł Stefański"
@@ -11,7 +11,16 @@
     "validator",
     "valid",
     "equal",
-    "compare"
+    "compare",
+    "email",
+    "ip",
+    "number",
+    "string",
+    "contains",
+    "lower than",
+    "greater than",
+    "shorter than",
+    "longer than"
   ],
   "homepage": "https://github.com/q-nick/that-value",
   "moduleType": [
