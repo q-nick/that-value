@@ -441,7 +441,7 @@
         "value": "BB12345", "arg": "BB"
       },
       {
-        "value": "AD12345", "arg": "HN"
+        "value": "HN12345", "arg": "HN"
       },
 
 
@@ -704,6 +704,23 @@
 
 
       {
+        "value": "123 12", "arg": "CZ"
+      },
+      {
+        "value": "123 12", "arg": "GR"
+      },
+      {
+        "value": "123 12", "arg": "SK"
+      },
+      {
+        "value": "123 12", "arg": "SE"
+      },
+
+
+
+
+
+      {
         "value": "FN-12345", "arg": "AX"
       },
       {
@@ -731,12 +748,6 @@
         "value": "AB1234", "arg": "BN"
       },
       {
-        "value": "123 12", "arg": "CZ"
-      },
-      {
-        "value": "123 12", "arg": "GR"
-      },
-      {
         "value": "FIQQ 1ZZ", "arg": "FK"
       },
       {
@@ -762,9 +773,6 @@
       },
       {
         "value": "12", "arg": "JM"
-      },
-      {
-        "value": "123-1234", "arg": "JP"
       },
       {
         "value": "JE1 1AB", "arg": "JE"
@@ -803,9 +811,6 @@
         "value": "PE 1234", "arg": "PE"
       },
       {
-        "value": "PE 1234", "arg": "PE"
-      },
-      {
         "value": "PCRN 1ZZ", "arg": "PN"
       },
       {
@@ -839,9 +844,6 @@
         "value": "12", "arg": "SG"
       },
       {
-        "value": "123 12", "arg": "SK"
-      },
-      {
         "value": "SI-1234", "arg": "SI"
       },
       {
@@ -852,9 +854,6 @@
       },
       {
         "value": "A123 1ZZ", "arg": "SZ"
-      },
-      {
-        "value": "123 12", "arg": "SE"
       },
       {
         "value": "123-12", "arg": "TW"

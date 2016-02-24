@@ -78,17 +78,17 @@ runTests(EmailValidatorTest.email, 'email');
 var ContainsValidatorTest = require('./lib/validator/contains/contains.test.json');
 runTests(ContainsValidatorTest.contains, 'contains');
 
-var GreaterValidatorTest = require('./lib/validator/greater/greater.test.json');
-runTests(GreaterValidatorTest.greater, 'greaterThan');
+var GreaterValidatorTest = require('./lib/validator/greaterThan/greaterThan.test.json');
+runTests(GreaterValidatorTest.greaterThan, 'greaterThan');
 
-var LowerValidatorTest = require('./lib/validator/lower/lower.test.json');
-runTests(LowerValidatorTest.lower, 'lowerThan');
+var LowerValidatorTest = require('./lib/validator/lowerThan/lowerThan.test.json');
+runTests(LowerValidatorTest.lowerThan, 'lowerThan');
 
-var ShorterValidatorTest = require('./lib/validator/shorter/shorter.test.json');
-runTests(ShorterValidatorTest.shorter, 'shorterThan');
+var ShorterValidatorTest = require('./lib/validator/shorterThan/shorterThan.test.json');
+runTests(ShorterValidatorTest.shorterThan, 'shorterThan');
 
-var LongerValidatorTest = require('./lib/validator/longer/longer.test.json');
-runTests(LongerValidatorTest.longer, 'longerThan');
+var LongerValidatorTest = require('./lib/validator/longerThan/longerThan.test.json');
+runTests(LongerValidatorTest.longerThan, 'longerThan');
 
 var IPValidatorTest = require('./lib/validator/ip/ip.test.json');
 runTests(IPValidatorTest.ip, 'ip');
@@ -98,6 +98,9 @@ runTests(VINValidatorTest.vin, 'vin');
 
 var URIValidatorTest = require('./lib/validator/uri/uri.test.json');
 runTests(URIValidatorTest.uri, 'uri');
+
+var ZipCodeValidatorTest = require('./lib/validator/zipCode/zipCode.test.json');
+runTests(ZipCodeValidatorTest.zipCode, 'zipCode');
 
 function executeTest(test, validator, type) {
     var isComplexTest = false;
