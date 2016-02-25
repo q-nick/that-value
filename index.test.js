@@ -99,8 +99,11 @@ runTests(VINValidatorTest.vin, 'vin');
 var URIValidatorTest = require('./lib/validator/uri/uri.test.json');
 runTests(URIValidatorTest.uri, 'uri');
 
-var ZipCodeValidatorTest = require('./lib/validator/zipCode/zipCode.test.json');
-runTests(ZipCodeValidatorTest.zipCode, 'zipCode');
+var ZipCodeValidatorTestValid = require('./lib/validator/zipCode/zipCode.valid.test.json');
+runTests(ZipCodeValidatorTestValid.zipCode, 'zipCode');
+
+var ZipCodeValidatorTestInvalid = require('./lib/validator/zipCode/zipCode.invalid.test.json');
+runTests(ZipCodeValidatorTestInvalid.zipCode, 'zipCode');
 
 function executeTest(test, validator, type) {
     var isComplexTest = false;

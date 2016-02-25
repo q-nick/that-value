@@ -1,0 +1,906 @@
+{
+  "zipCode":{
+    "invalid":[
+      {
+        "value": "123", "arg": "AF"
+      },
+      {
+        "value": "123", "arg": "AL"
+      },
+      {
+        "value": "123", "arg": "AM"
+      },
+      {
+        "value": "123", "arg": "AR"
+      },
+      {
+        "value": "123", "arg": "AT"
+      },
+      {
+        "value": "123", "arg": "AU"
+      },
+      {
+        "value": "123", "arg": "BD"
+      },
+      {
+        "value": "123", "arg": "BE"
+      },
+      {
+        "value": "123", "arg": "BG"
+      },
+      {
+        "value": "123", "arg": "CV"
+      },
+      {
+        "value": "123", "arg": "CX"
+      },
+      {
+        "value": "123", "arg": "CC"
+      },
+      {
+        "value": "123", "arg": "CY"
+      },
+      {
+        "value": "123", "arg": "DK"
+      },
+      {
+        "value": "123", "arg": "SV"
+      },
+      {
+        "value": "123", "arg": "ET"
+      },
+      {
+        "value": "123", "arg": "GE"
+      },
+      {
+        "value": "123", "arg": "DE"
+      },
+      {
+        "value": "123", "arg": "GL"
+      },
+      {
+        "value": "123", "arg": "GW"
+      },
+      {
+        "value": "123", "arg": "HT"
+      },
+      {
+        "value": "123", "arg": "HU"
+      },
+      {
+        "value": "123", "arg": "LR"
+      },
+      {
+        "value": "123", "arg": "LU"
+      },
+      {
+        "value": "123", "arg": "LI"
+      },
+      {
+        "value": "123", "arg": "MK"
+      },
+      {
+        "value": "123", "arg": "MZ"
+      },
+      {
+        "value": "123", "arg": "NZ"
+      },
+      {
+        "value": "123", "arg": "NE"
+      },
+      {
+        "value": "123", "arg": "NF"
+      },
+      {
+        "value": "123", "arg": "NO"
+      },
+      {
+        "value": "123", "arg": "PA"
+      },
+      {
+        "value": "123", "arg": "PY"
+      },
+      {
+        "value": "123", "arg": "PH"
+      },
+      {
+        "value": "123", "arg": "PT"
+      },
+      {
+        "value": "123", "arg": "SG"
+      },
+      {
+        "value": "123", "arg": "SI"
+      },
+      {
+        "value": "123", "arg": "ZA"
+      },
+      {
+        "value": "123", "arg": "CH"
+      },
+      {
+        "value": "123", "arg": "SJ"
+      },
+      {
+        "value": "123", "arg": "TN"
+      },
+      {
+        "value": "123", "arg": "VE"
+      },
+
+
+
+
+
+
+      {
+        "value": "1234", "arg": "AX"
+      },
+      {
+        "value": "1234", "arg": "DZ"
+      },
+      {
+        "value": "1234", "arg": "AS"
+      },
+      {
+        "value": "1234", "arg": "BT"
+      },
+      {
+        "value": "1234", "arg": "BA"
+      },
+      {
+        "value": "1234", "arg": "BR"
+      },
+      {
+        "value": "1234", "arg": "KH"
+      },
+      {
+        "value": "1234", "arg": "CR"
+      },
+      {
+        "value": "1234", "arg": "HR"
+      },
+      {
+        "value": "1234", "arg": "CU"
+      },
+      {
+        "value": "1234", "arg": "DO"
+      },
+      {
+        "value": "1234", "arg": "EG"
+      },
+      {
+        "value": "1234", "arg": "EE"
+      },
+      {
+        "value": "1234", "arg": "FI"
+      },
+      {
+        "value": "1234", "arg": "FR"
+      },
+      {
+        "value": "1234678", "arg": "DE"
+      },
+      {
+        "value": "1234", "arg": "GU"
+      },
+      {
+        "value": "1234", "arg": "GT"
+      },
+      {
+        "value": "1234", "arg": "ID"
+      },
+      {
+        "value": "1234", "arg": "IQ"
+      },
+      {
+        "value": "1234", "arg": "IT"
+      },
+      {
+        "value": "1234", "arg": "JO"
+      },
+      {
+        "value": "1234", "arg": "KE"
+      },
+      {
+        "value": "1234", "arg": "KR"
+      },
+      {
+        "value": "1234", "arg": "XK"
+      },
+      {
+        "value": "1234", "arg": "KW"
+      },
+      {
+        "value": "1234", "arg": "LA"
+      },
+      {
+        "value": "1234", "arg": "LB"
+      },
+      {
+        "value": "1234", "arg": "MY"
+      },
+      {
+        "value": "1234", "arg": "MV"
+      },
+      {
+        "value": "1234", "arg": "MH"
+      },
+      {
+        "value": "1234", "arg": "MU"
+      },
+      {
+        "value": "1234", "arg": "MX"
+      },
+      {
+        "value": "1234", "arg": "FM"
+      },
+      {
+        "value": "1234", "arg": "ME"
+      },
+      {
+        "value": "1234", "arg": "MA"
+      },
+      {
+        "value": "1234", "arg": "MM"
+      },
+      {
+        "value": "1234", "arg": "NA"
+      },
+      {
+        "value": "1234", "arg": "NP"
+      },
+      {
+        "value": "1234", "arg": "NI"
+      },
+      {
+        "value": "1234", "arg": "MP"
+      },
+      {
+        "value": "1234", "arg": "PK"
+      },
+      {
+        "value": "1234", "arg": "PW"
+      },
+      {
+        "value": "1234", "arg": "PE"
+      },
+      {
+        "value": "1234", "arg": "PR"
+      },
+      {
+        "value": "1234", "arg": "SA"
+      },
+      {
+        "value": "1234", "arg": "SN"
+      },
+      {
+        "value": "1234", "arg": "RS"
+      },
+      {
+        "value": "1234", "arg": "ES"
+      },
+      {
+        "value": "1234", "arg": "LK"
+      },
+      {
+        "value": "1234", "arg": "SD"
+      },
+      {
+        "value": "1234", "arg": "TZ"
+      },
+      {
+        "value": "1234", "arg": "TH"
+      },
+      {
+        "value": "1234", "arg": "TR"
+      },
+      {
+        "value": "1234", "arg": "UA"
+      },
+      {
+        "value": "1234", "arg": "US"
+      },
+      {
+        "value": "1234", "arg": "UY"
+      },
+      {
+        "value": "1234", "arg": "VI"
+      },
+      {
+        "value": "1234", "arg": "ZM"
+      },
+
+
+
+
+
+
+
+
+      {
+        "value": "12345", "arg": "BD"
+      },
+      {
+        "value": "12345", "arg": "BY"
+      },
+      {
+        "value": "12345", "arg": "CN"
+      },
+      {
+        "value": "12345", "arg": "CO"
+      },
+      {
+        "value": "12345", "arg": "EC"
+      },
+      {
+        "value": "12345", "arg": "IN"
+      },
+      {
+        "value": "12345", "arg": "KZ"
+      },
+      {
+        "value": "12345", "arg": "KG"
+      },
+      {
+        "value": "12345", "arg": "MN"
+      },
+      {
+        "value": "12345", "arg": "NG"
+      },
+      {
+        "value": "12345", "arg": "RO"
+      },
+      {
+        "value": "12345", "arg": "RU"
+      },
+      {
+        "value": "12345", "arg": "SG"
+      },
+      {
+        "value": "12345", "arg": "TJ"
+      },
+      {
+        "value": "12345", "arg": "TT"
+      },
+      {
+        "value": "12345", "arg": "TM"
+      },
+      {
+        "value": "12345", "arg": "UZ"
+      },
+      {
+        "value": "12345", "arg": "VN"
+      },
+
+
+
+
+
+      {
+        "value": "1234-1234", "arg": "AS"
+      },
+      {
+        "value": "1234-1234", "arg": "CR"
+      },
+      {
+        "value": "1234-1234", "arg": "GU"
+      },
+      {
+        "value": "1234-1234", "arg": "MH"
+      },
+      {
+        "value": "1234-1234", "arg": "FM"
+      },
+      {
+        "value": "1234-1234", "arg": "MP"
+      },
+      {
+        "value": "1234-1234", "arg": "PW"
+      },
+      {
+        "value": "1234-1234", "arg": "PR"
+      },
+      {
+        "value": "1234-1234", "arg": "SA"
+      },
+      {
+        "value": "1234-1234", "arg": "US"
+      },
+      {
+        "value": "1234-1234", "arg": "VI"
+      },
+
+
+
+
+
+
+      {
+        "value": "AF1234", "arg": "AZ"
+      },
+      {
+        "value": "VF1234", "arg": "VG"
+      },
+      {
+        "value": "MF1234", "arg": "MD"
+      },
+      {
+        "value": "VF1234", "arg": "VC"
+      },
+      {
+        "value": "WF1234", "arg": "WS"
+      },
+
+
+
+
+
+
+      {
+        "value": "BC12345", "arg": "BB"
+      },
+      {
+        "value": "HC12345", "arg": "HN"
+      },
+
+
+
+
+      {
+        "value": "a", "arg": "AO"
+      },
+      {
+        "value": "a", "arg": "AG"
+      },
+      {
+        "value": "a", "arg": "AW"
+      },
+      {
+        "value": "a", "arg": "BS"
+      },
+      {
+        "value": "a", "arg": "BZ"
+      },
+      {
+        "value": "a", "arg": "BJ"
+      },
+      {
+        "value": "a", "arg": "BM"
+      },
+      {
+        "value": "a", "arg": "BO"
+      },
+      {
+        "value": "a", "arg": "BQ"
+      },
+      {
+        "value": "a", "arg": "BW"
+      },
+      {
+        "value": "a", "arg": "BF"
+      },
+      {
+        "value": "a", "arg": "BI"
+      },
+      {
+        "value": "a", "arg": "CM"
+      },
+      {
+        "value": "a", "arg": "CF"
+      },
+      {
+        "value": "a", "arg": "TD"
+      },
+      {
+        "value": "a", "arg": "KM"
+      },
+      {
+        "value": "a", "arg": "CG"
+      },
+      {
+        "value": "a", "arg": "CD"
+      },
+      {
+        "value": "a", "arg": "CK"
+      },
+      {
+        "value": "a", "arg": "CI"
+      },
+      {
+        "value": "a", "arg": "CW"
+      },
+      {
+        "value": "a", "arg": "DJ"
+      },
+      {
+        "value": "a", "arg": "DM"
+      },
+      {
+        "value": "a", "arg": "TL"
+      },
+      {
+        "value": "a", "arg": "GQ"
+      },
+      {
+        "value": "a", "arg": "ER"
+      },
+      {
+        "value": "a", "arg": "FJ"
+      },
+      {
+        "value": "a", "arg": "TF"
+      },
+      {
+        "value": "a", "arg": "GA"
+      },
+      {
+        "value": "a", "arg": "GM"
+      },
+      {
+        "value": "a", "arg": "GH"
+      },
+      {
+        "value": "a", "arg": "GD"
+      },
+      {
+        "value": "a", "arg": "GY"
+      },
+      {
+        "value": "a", "arg": "HM"
+      },
+      {
+        "value": "a", "arg": "HK"
+      },
+      {
+        "value": "a", "arg": "IE"
+      },
+      {
+        "value": "a", "arg": "KI"
+      },
+      {
+        "value": "a", "arg": "KP"
+      },
+      {
+        "value": "a", "arg": "LY"
+      },
+      {
+        "value": "a", "arg": "MO"
+      },
+      {
+        "value": "a", "arg": "MW"
+      },
+      {
+        "value": "a", "arg": "ML"
+      },
+      {
+        "value": "a", "arg": "MR"
+      },
+      {
+        "value": "a", "arg": "NR"
+      },
+      {
+        "value": "a", "arg": "NL"
+      },
+      {
+        "value": "a", "arg": "NU"
+      },
+      {
+        "value": "a", "arg": "QA"
+      },
+      {
+        "value": "a", "arg": "KN"
+      },
+      {
+        "value": "a", "arg": "ST"
+      },
+      {
+        "value": "a", "arg": "SC"
+      },
+      {
+        "value": "a", "arg": "SL"
+      },
+      {
+        "value": "a", "arg": "SX"
+      },
+      {
+        "value": "a", "arg": "SB"
+      },
+      {
+        "value": "a", "arg": "SR"
+      },
+      {
+        "value": "a", "arg": "SY"
+      },
+      {
+        "value": "a", "arg": "TG"
+      },
+      {
+        "value": "a", "arg": "TK"
+      },
+      {
+        "value": "a", "arg": "TO"
+      },
+      {
+        "value": "a", "arg": "TV"
+      },
+      {
+        "value": "a", "arg": "UG"
+      },
+      {
+        "value": "a", "arg": "AE"
+      },
+      {
+        "value": "a", "arg": "VU"
+      },
+      {
+        "value": "a", "arg": "YE"
+      },
+      {
+        "value": "a", "arg": "ZW"
+      },
+
+
+
+
+
+
+      {
+        "value": "12", "arg": "BH"
+      },
+      {
+        "value": "12", "arg": "FO"
+      },
+      {
+        "value": "12", "arg": "GN"
+      },
+      {
+        "value": "12", "arg": "IS"
+      },
+      {
+        "value": "12", "arg": "LS"
+      },
+      {
+        "value": "12", "arg": "OM"
+      },
+      {
+        "value": "12", "arg": "PS"
+      },
+      {
+        "value": "12", "arg": "PG"
+      },
+      {
+        "value": "12", "arg": "TW"
+      },
+
+
+
+
+
+
+      {
+        "value": "123456", "arg": "CL"
+      },
+      {
+        "value": "123456", "arg": "IL"
+      },
+
+
+
+
+
+
+
+      {
+        "value": "123-123", "arg": "CL"
+      },
+      {
+        "value": "123-123", "arg": "JP"
+      },
+
+
+
+
+
+
+      {
+        "value": "12 12", "arg": "CZ"
+      },
+      {
+        "value": "12 12", "arg": "GR"
+      },
+      {
+        "value": "12 12", "arg": "SK"
+      },
+      {
+        "value": "12 12", "arg": "SE"
+      },
+
+
+
+
+
+      {
+        "value": "AX-12345", "arg": "AX"
+      },
+      {
+        "value": "SS-12345", "arg": "LT"
+      },
+      {
+        "value": "AC123", "arg": "AD"
+      },
+      {
+        "value": "AF-2640", "arg": "AI"
+      },
+      {
+        "value": "BIRQ 1ZZ", "arg": "AQ"
+      },
+      {
+        "value": "BBGD 1ZZ", "arg": "IO"
+      },
+      {
+        "value": "A1 2C3", "arg": "CA"
+      },
+      {
+        "value": "KS1-1234", "arg": "KY"
+      },
+      {
+        "value": "AB234", "arg": "BN"
+      },
+      {
+        "value": "FDSQ 1ZZ", "arg": "FK"
+      },
+      {
+        "value": "91311", "arg": "GF"
+      },
+      {
+        "value": "93712", "arg": "PF"
+      },
+      {
+        "value": "GX41 1AA", "arg": "GI"
+      },
+      {
+        "value": "95112", "arg": "GP"
+      },
+      {
+        "value": "A1 1AB", "arg": "GG"
+      },
+      {
+        "value": "12 1AB", "arg": "GG"
+      },
+      {
+        "value": "12 123", "arg": "IN"
+      },
+      {
+        "value": "1", "arg": "JM"
+      },
+      {
+        "value": "JS1 1AB", "arg": "JE"
+      },
+      {
+        "value": "JER12 1AB", "arg": "JE"
+      },
+      {
+        "value": "LS-1234", "arg": "LV"
+      },
+      {
+        "value": "14-1234", "arg": "LB"
+      },
+      {
+        "value": "AC 1234", "arg": "MT"
+      },
+      {
+        "value": "91212", "arg": "MQ"
+      },
+      {
+        "value": "17612", "arg": "YT"
+      },
+      {
+        "value": "MF-1234", "arg": "MD"
+      },
+      {
+        "value": "38012", "arg": "MC"
+      },
+      {
+        "value": "MZR 1110-1350", "arg": "MS"
+      },
+      {
+        "value": "38812", "arg": "NC"
+      },
+      {
+        "value": "PF 1234", "arg": "PE"
+      },
+      {
+        "value": "PCR 1ZZ", "arg": "PN"
+      },
+      {
+        "value": "12 123", "arg": "PL"
+      },
+      {
+        "value": "123-123", "arg": "PT"
+      },
+      {
+        "value": "27412", "arg": "RE"
+      },
+      {
+        "value": "93133", "arg": "BL"
+      },
+      {
+        "value": "SAHL 1ZZ", "arg": "SH"
+      },
+      {
+        "value": "L12 123", "arg": "LC"
+      },
+      {
+        "value": "91150", "arg": "MF"
+      },
+      {
+        "value": "57500", "arg": "PM"
+      },
+      {
+        "value": "46891", "arg": "SM"
+      },
+      {
+        "value": "1", "arg": "SG"
+      },
+      {
+        "value": "SA-1234", "arg": "SI"
+      },
+      {
+        "value": "ABC 1234", "arg": "SO"
+      },
+      {
+        "value": "SIQ 1ZZ", "arg": "GS"
+      },
+      {
+        "value": "AF123 1ZZ", "arg": "SZ"
+      },
+      {
+        "value": "123 2", "arg": "TW"
+      },
+      {
+        "value": "TACU 1ZZ", "arg": "SH"
+      },
+      {
+        "value": "TFCA 1ZZ", "arg": "TC"
+      },
+      {
+        "value": "48612", "arg": "WF"
+      },
+      {
+        "value": "1234-AA", "arg": "VE"
+      },
+      {
+        "value": "02120", "arg": "VA"
+      },
+
+
+
+
+
+
+      {
+        "value": "AA1AA 1AB", "arg": "GB"
+      },
+      {
+        "value": "A1AA 1AB", "arg": "GB"
+      },
+
+      {
+        "value": "A1A 1A", "arg": "GB"
+      },
+      {
+        "value": "A12 1A", "arg": "GB"
+      },
+
+      {
+        "value": "ABC1 1AB", "arg": "GB"
+      },
+      {
+        "value": "AB12 1ABC", "arg": "GB"
+      }
+    ],
+    "valid":[
+    ]
+  }
+}
