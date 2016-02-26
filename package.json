@@ -12,8 +12,8 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha ./index.test.js",
     "start": "./bin/that-value",
-    "build": "./node_modules/webpack/bin/webpack.js -p",
-    "generate-readme": "./tools/generate-readme"
+    "webpack": "./node_modules/webpack/bin/webpack.js -p",
+    "generate-readme": "node ./tools/generate-README"
   },
   "repository": {
     "type": "git",
