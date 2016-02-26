@@ -13,7 +13,7 @@
     "test": "./node_modules/mocha/bin/mocha ./index.test.js",
     "start": "./bin/that-value",
     "webpack": "./node_modules/webpack/bin/webpack.js -p",
-    "generate-readme": "node ./tools/generate-README"
+    "generate:readme": "./tools/generate-README"
   },
   "repository": {
     "type": "git",
